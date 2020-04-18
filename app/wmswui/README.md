@@ -1,4 +1,4 @@
-# wms-web
+# wmswui
 
 ## Project setup
 ```
