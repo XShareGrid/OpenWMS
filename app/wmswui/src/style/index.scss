@@ -1,6 +1,9 @@
 /*全局样式*/
 @import "./element-variables.scss";
 @import './wms-var.scss';
+@import "./tool.scss";
+@import "./warehouse-files-input.scss";
+
 html{
   height: 100%;
   -moz-osx-font-smoothing: grayscale;
@@ -59,6 +62,47 @@ div:focus {
   outline: none;
 }
 
+input:focus {
+  outline: none;
+  text-decoration: none;
+}
+
+.wms-scroll-styl::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+/*正常情况下滑块的样式*/
+.wms-scroll-styl::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, .05);
+  border-radius: 10px;
+  -webkit-box-shadow: inset 1px 1px 0 rgba(0, 0, 0, .1);
+}
+/*鼠标悬浮在该类指向的控件上时滑块的样式*/
+
+.wms-scroll-styl:hover::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, .2);
+  border-radius: 10px;
+  -webkit-box-shadow: inset 1px 1px 0 rgba(0, 0, 0, .1);
+}
+/*鼠标悬浮在滑块上时滑块的样式*/
+
+.wms-scroll-styl::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, .4);
+  -webkit-box-shadow: inset 1px 1px 0 rgba(0, 0, 0, .1);
+}
+/*正常时候的主干部分*/
+
+.wms-scroll-styl::-webkit-scrollbar-track {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
+  background-color: white;
+}
+/*鼠标悬浮在滚动条上的主干部分*/
+
+.wms-scroll-styl::-webkit-scrollbar-track:hover {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .4);
+  background-color: rgba(0, 0, 0, .01);
+}
 .fr {
   float: right;
 }
@@ -87,20 +131,39 @@ div:focus {
   top: 60px;
   bottom: 0;
   overflow: hidden;
-  background-color: #304156;
+  background-color: #FFFFFF;
   z-index: 100;
 }
 .main-container {
   height: calc(100% - 60px);
   position: relative;
+  color: #333333;
   top: 60px;
   margin-left: 200px;
   overflow: hidden;
 }
 .app-container {
   width: 100%;
+  height: 100%;
   min-height: 100%;
   position: relative;
   overflow: auto;
   color: #333333;
+}
+.wms-content-mg {
+  padding: 15px;
+}
+/*表格样式*/
+.table-row-header-styl {
+  th {
+    background-color: #f2f2f2 !important;
+  }
+}
+.table-row-styl {
+  td {
+    padding: 0 !important;
+    div {
+      line-height: 40px !important;
+    }
+  }
 }
