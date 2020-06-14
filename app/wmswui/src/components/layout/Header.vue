@@ -16,12 +16,13 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
+
 @Component
 export default class Header extends Vue {
-  title = 'WMS';
-  circleUrl = 'https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png';
-  menuData = ["工作台", "store 仓库管理", "user 用户管理", "统计分析", "系统分析"];
-  menuIndex = 0;
+  public title = 'WMS';
+  public circleUrl = 'https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png';
+  public menuData = ['工作台', 'store 仓库管理', 'user 用户管理', '统计分析', '系统分析'];
+  public menuIndex = 0;
 }
 </script>
 
